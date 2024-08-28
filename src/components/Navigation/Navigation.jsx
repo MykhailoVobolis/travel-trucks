@@ -14,7 +14,7 @@ export default function Navigation() {
       <div className={css.container}>
         <nav className={css.navigation}>
           <Link to="/">
-            <img className={css.logo} width={136} height={16} src="/src/assets/icons/logo.svg" alt="logo" />
+            <img className={css.logo} width={136} height={16} src="/icons/logo.svg" alt="logo" />
           </Link>
           <ul className={css.navMenu}>
             <li>
