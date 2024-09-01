@@ -1,4 +1,5 @@
 import RatingStars from "../RatingStars/RatingStars.jsx";
+
 import css from "./ReviewItem.module.css";
 
 export default function ReviewItem({ review: { comment, reviewer_name, reviewer_rating } }) {

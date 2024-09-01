@@ -1,12 +1,14 @@
 import toast from "react-hot-toast";
-import { useId } from "react";
 import { Field, Form, Formik } from "formik";
 import { Wind, CupHot, Diagram3, Display, Droplet, Grid1x2, Grid, Grid3x3Gap, Map } from "react-bootstrap-icons";
-import FormButton from "../FormButton/FormButton.jsx";
+
+import { useId } from "react";
 import { useDispatch } from "react-redux";
 import { setFilterParams } from "../../redux/filters/slice.js";
 import { fetchCampers } from "../../redux/campers/operations.js";
 import { resetPage } from "../../redux/campers/slice.js";
+
+import FormButton from "../FormButton/FormButton.jsx";
 
 import css from "./FilterForm.module.css";
 

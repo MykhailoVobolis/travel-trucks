@@ -1,8 +1,12 @@
 import { useId } from "react";
 import { Field, Form, Formik, ErrorMessage } from "formik";
+import "react-datepicker/dist/react-datepicker.css";
 import * as Yup from "yup";
 import toast from "react-hot-toast";
+
 import FormButton from "../FormButton/FormButton.jsx";
+import DatePickerField from "../DatePickerField/DatePickerField.jsx";
+
 import css from "./BookingForm.module.css";
 
 const regex = {
@@ -32,8 +36,8 @@ const initialValues = {
 export default function BookingForm() {
   const nameFieldId = useId();
   const emailFieldId = useId();
-  const dateFieldId = useId();
   const commentFieldId = useId();
+  const dateFieldId = useId();
 
   const handleSubmit = (values, actions) => {
     toast("Camper successfully booked!", {
@@ -71,7 +75,8 @@ export default function BookingForm() {
             required
           />
           <ErrorMessage className={css.error} name="email" component="span" />
-          <Field className={css.input} type="date" name="date" id={dateFieldId} placeholder="Booking date*" required />
+          <DatePickerField name="date" id={dateFieldId} required />
+          <ErrorMessage className={css.error} name="date" component="span" />
           <Field
             className={css.commentInput}
             as="textarea"
@@ -80,7 +85,6 @@ export default function BookingForm() {
             placeholder="Comment"
             rows="4"
           />
-          <ErrorMessage className={css.error} name="date" component="span" />
           <FormButton>Send</FormButton>
         </Form>
       </Formik>

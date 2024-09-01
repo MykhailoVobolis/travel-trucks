@@ -1,14 +1,17 @@
 import { Toaster } from "react-hot-toast";
+
 import { useDispatch, useSelector } from "react-redux";
-import { selectCampers, selectError, selectLoading } from "../../redux/campers/selectors.js";
 import { Suspense, useEffect } from "react";
-import { fetchCamperById } from "../../redux/campers/operations.js";
 import { Outlet, useParams } from "react-router-dom";
+import { selectCampers, selectError, selectLoading } from "../../redux/campers/selectors.js";
+import { fetchCamperById } from "../../redux/campers/operations.js";
+
 import Spinner from "../../components/Spinner/Spinner.jsx";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 import AboutCamper from "../../components/AboutCamper/AboutCamper.jsx";
 import CamperInfoNavigation from "../../components/CamperInfoNavigation/CamperInfoNavigation.jsx";
 import BookingForm from "../../components/BookingForm/BookingForm.jsx";
+
 import css from "./CamperDetailsPage.module.css";
 
 export default function CamperDetailsPage() {

@@ -1,4 +1,5 @@
 import { Wind, CupHot, Diagram3, Display, Droplet, Water, Fire, Snow, FuelPump, UiRadios } from "react-bootstrap-icons";
+
 import CategoriesItem from "../CategoriesItem/CategoriesItem.jsx";
 
 import css from "./CategoriesList.module.css";

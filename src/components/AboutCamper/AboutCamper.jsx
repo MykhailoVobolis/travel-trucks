@@ -1,5 +1,7 @@
 import { StarFill, Map } from "react-bootstrap-icons";
+
 import ImageGallery from "../ImageGallery/ImageGallery.jsx";
+
 import css from "./AboutCamper.module.css";
 
 export default function AboutCamper({ camper }) {

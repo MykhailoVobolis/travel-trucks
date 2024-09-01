@@ -30,7 +30,7 @@
   border: none;
   border-radius: 12px;
   padding: 18px;
-  width: 100%;
+  width: 527px;
   background-color: var(--main-inputs-color);
   outline: transparent;
   outline-offset: 4px;
@@ -41,7 +41,7 @@
 }
 
 .commentInput {
-  width: 100%;
+  width: 527px;
   height: 118px;
   border: none;
   border-radius: 12px;

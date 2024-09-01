@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import { StarFill } from "react-bootstrap-icons";
+
 import css from "./RatingStars.module.css";
 
 export default function RatingStars({ count }) {

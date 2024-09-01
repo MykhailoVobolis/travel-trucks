@@ -1,7 +1,10 @@
 import { nanoid } from "nanoid";
+
 import { useSelector } from "react-redux";
 import { selectCampers } from "../../redux/campers/selectors.js";
+
 import ReviewItem from "../ReviewItem/ReviewItem.jsx";
+
 import css from "./Reviews.module.css";
 
 export default function Reviews() {

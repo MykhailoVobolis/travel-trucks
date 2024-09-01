@@ -1,9 +1,12 @@
 import { SuitHeart, StarFill, Map } from "react-bootstrap-icons";
-import CategoriesList from "../CategoriesList/CategoriesList.jsx";
-import LinkButton from "../LinkButton/LinkButton.jsx";
 import { useDispatch, useSelector } from "react-redux";
+
 import { toggleFavorite } from "../../redux/campers/slice.js";
 import { selectCampers } from "../../redux/campers/selectors.js";
+
+import LinkButton from "../LinkButton/LinkButton.jsx";
+import CategoriesList from "../CategoriesList/CategoriesList.jsx";
+
 import css from "./CamperCard.module.css";
 
 export default function CamperCard({ camper }) {

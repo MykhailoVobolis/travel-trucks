@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
+
 import css from "./LinkButton.module.css";
 
 export default function LinkButton({ variant, children, to }) {

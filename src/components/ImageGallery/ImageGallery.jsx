@@ -1,5 +1,7 @@
 import { nanoid } from "nanoid";
+
 import ImageCard from "../ImageCard/ImageCard.jsx";
+
 import css from "./ImageGallery.module.css";
 
 export default function ImageGallery({ gallery }) {

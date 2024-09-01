@@ -1,6 +1,8 @@
 import { useSelector } from "react-redux";
-import CategoriesList from "../CategoriesList/CategoriesList.jsx";
 import { selectCampers } from "../../redux/campers/selectors.js";
+
+import CategoriesList from "../CategoriesList/CategoriesList.jsx";
+
 import css from "./Features.module.css";
 
 export default function Features() {

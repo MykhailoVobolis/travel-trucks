@@ -1,12 +1,13 @@
 import { Toaster } from "react-hot-toast";
-import FilterForm from "../../components/FilterForm/FilterForm.jsx";
-import CamperCardCollection from "../../components/CamperCardCollection/CamperCardCollection.jsx";
-import Spinner from "../../components/Spinner/Spinner.jsx";
 
 import { useDispatch, useSelector } from "react-redux";
-import { fetchCampers } from "../../redux/campers/operations.js";
 import { useEffect } from "react";
+import { fetchCampers } from "../../redux/campers/operations.js";
 import { selectLoading } from "../../redux/campers/selectors.js";
+
+import CamperCardCollection from "../../components/CamperCardCollection/CamperCardCollection.jsx";
+import Spinner from "../../components/Spinner/Spinner.jsx";
+import FilterForm from "../../components/FilterForm/FilterForm.jsx";
 
 import css from "./CampersPage.module.css";
 
