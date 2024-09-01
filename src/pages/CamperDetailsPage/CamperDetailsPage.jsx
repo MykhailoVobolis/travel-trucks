@@ -7,6 +7,7 @@ import Spinner from "../../components/Spinner/Spinner.jsx";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 import AboutCamper from "../../components/AboutCamper/AboutCamper.jsx";
 import css from "./CamperDetailsPage.module.css";
+import Features from "../../components/Features/Features.jsx";
 
 export default function CamperDetailsPage() {
   const dispatch = useDispatch();
@@ -24,7 +25,12 @@ export default function CamperDetailsPage() {
     <section className={css.camper}>
       {loading && <Spinner isLoading={loading} />}
       {error && <ErrorMessage error={error} />}
-      <div className={css.container}>{currentItem && <AboutCamper camper={currentItem} />}</div>
+      {currentItem && (
+        <div className={css.container}>
+          <AboutCamper camper={currentItem} />
+          <Features camper={currentItem} />
+        </div>
+      )}
     </section>
   );
 }
