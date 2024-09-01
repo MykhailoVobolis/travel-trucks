@@ -23,7 +23,7 @@ export default function Navigation() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="/trucks" className={getNavLinkClass}>
+              <NavLink to="/catalog" className={getNavLinkClass}>
                 Catalog
               </NavLink>
             </li>

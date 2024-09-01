@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import LinkButton from "../../components/LinkButton/LinkButton.jsx";
 import css from "./HomePage.module.css";
 
 export default function HomePage() {
@@ -7,9 +7,7 @@ export default function HomePage() {
       <div className={css.container}>
         <h1 className={css.mainTitle}>Campers of your dreams</h1>
         <p className={css.text}>You can find everything you want in our catalog</p>
-        <Link to="/trucks" className={css.heroBtn}>
-          View Now
-        </Link>
+        <LinkButton to={"/catalog"}>View Now</LinkButton>
       </div>
     </section>
   );
