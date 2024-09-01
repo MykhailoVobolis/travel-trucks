@@ -1,8 +1,12 @@
+import { useSelector } from "react-redux";
 import CategoriesList from "../CategoriesList/CategoriesList.jsx";
+import { selectCampers } from "../../redux/campers/selectors.js";
 import css from "./Features.module.css";
 
-export default function Features({ camper }) {
-  const { form, length, width, height, tank, consumption } = camper;
+export default function Features() {
+  const { currentItem } = useSelector(selectCampers);
+
+  const { form, length, width, height, tank, consumption } = currentItem;
 
   const formattedForm = `${form.charAt(0).toUpperCase()}${form.slice(1)}`;
 
@@ -16,7 +20,7 @@ export default function Features({ camper }) {
 
   return (
     <div className={css.featuresCamperWrapper}>
-      <CategoriesList camper={camper} />
+      <CategoriesList camper={currentItem} />
       <div>
         <h3 className={css.paramsTitle}>Vehicle details</h3>
         <div className={css.detailsContainer}>

@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
 import { selectCampers, selectError, selectLoading } from "../../redux/campers/selectors.js";
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import { fetchCamperById } from "../../redux/campers/operations.js";
-import { useParams } from "react-router-dom";
+import { Outlet, useParams } from "react-router-dom";
 import Spinner from "../../components/Spinner/Spinner.jsx";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 import AboutCamper from "../../components/AboutCamper/AboutCamper.jsx";
+import CamperInfoNavigation from "../../components/CamperInfoNavigation/CamperInfoNavigation.jsx";
 import css from "./CamperDetailsPage.module.css";
-import Features from "../../components/Features/Features.jsx";
 
 export default function CamperDetailsPage() {
   const dispatch = useDispatch();
@@ -28,7 +28,10 @@ export default function CamperDetailsPage() {
       {currentItem && (
         <div className={css.container}>
           <AboutCamper camper={currentItem} />
-          <Features camper={currentItem} />
+          <CamperInfoNavigation />
+          <Suspense fallback={<div></div>}>
+            <Outlet />
+          </Suspense>
         </div>
       )}
     </section>
