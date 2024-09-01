@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { selectCampers } from "../../redux/campers/selectors.js";
+import { selectCampers, selectError } from "../../redux/campers/selectors.js";
 import { fetchCampers } from "../../redux/campers/operations.js";
 import { incrementPage } from "../../redux/campers/slice.js";
 
@@ -11,6 +11,7 @@ import css from "./CamperCardCollection.module.css";
 export default function CamperCardCollection() {
   const dispatch = useDispatch();
   const campers = useSelector(selectCampers);
+  const error = useSelector(selectError);
   const { morePages } = useSelector(selectCampers);
   const { items = [] } = campers;
 
@@ -30,7 +31,7 @@ export default function CamperCardCollection() {
           </li>
         ))}
       </ul>
-      {morePages && <LoadMoreButton onClick={handleLoadMore}>Load more</LoadMoreButton>}
+      {!error && morePages && <LoadMoreButton onClick={handleLoadMore}>Load more</LoadMoreButton>}
     </div>
   );
 }
