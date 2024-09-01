@@ -10,7 +10,7 @@
   padding: 16px 48px;
   align-items: center;
   justify-content: center;
-  min-width: 166px;
+  width: 166px;
   background-color: var(--main-button-color);
   transition: background-color var(--animation);
 }

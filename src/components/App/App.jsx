@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { lazy } from "react";
 import Layout from "../Layout/Layout.jsx";
 
@@ -18,6 +18,7 @@ export default function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/catalog" element={<CampersPage />} />
         <Route path="/catalog/:id" element={<CamperDetailsPage />}>
+          <Route index element={<Navigate to="features" replace />} />
           <Route path="features" element={<Features />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>

@@ -25,7 +25,11 @@ export const fetchCampers = createAsyncThunk("campers/fetchAll", async (_, thunk
     const response = await axios.get(`/campers?${params}`);
     return response.data;
   } catch (error) {
-    return thunkAPI.rejectWithValue(error.message);
+    if (error.response && error.response.status === 404) {
+      return thunkAPI.rejectWithValue("No campers were found that match your filters");
+    } else {
+      return thunkAPI.rejectWithValue(error.message);
+    }
   }
 });
 

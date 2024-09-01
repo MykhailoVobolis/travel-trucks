@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { useId } from "react";
 import { Field, Form, Formik } from "formik";
 import { Wind, CupHot, Diagram3, Display, Droplet, Grid1x2, Grid, Grid3x3Gap, Map } from "react-bootstrap-icons";
@@ -32,7 +33,16 @@ export default function FilterForm() {
   const handleSubmit = (values, actions) => {
     dispatch(setFilterParams(values));
     dispatch(resetPage());
-    dispatch(fetchCampers());
+    dispatch(fetchCampers())
+      .unwrap()
+      .catch((error) => {
+        toast("Sorry, no campers were found matching your criteria.", {
+          style: {
+            color: "#FFFFFF",
+            backgroundColor: "#E44848",
+          },
+        });
+      });
     actions.resetForm();
   };
 

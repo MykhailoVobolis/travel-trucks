@@ -1,3 +1,4 @@
+import { Toaster } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { selectCampers, selectError, selectLoading } from "../../redux/campers/selectors.js";
 import { Suspense, useEffect } from "react";
@@ -7,6 +8,7 @@ import Spinner from "../../components/Spinner/Spinner.jsx";
 import ErrorMessage from "../../components/ErrorMessage/ErrorMessage.jsx";
 import AboutCamper from "../../components/AboutCamper/AboutCamper.jsx";
 import CamperInfoNavigation from "../../components/CamperInfoNavigation/CamperInfoNavigation.jsx";
+import BookingForm from "../../components/BookingForm/BookingForm.jsx";
 import css from "./CamperDetailsPage.module.css";
 
 export default function CamperDetailsPage() {
@@ -29,11 +31,15 @@ export default function CamperDetailsPage() {
         <div className={css.container}>
           <AboutCamper camper={currentItem} />
           <CamperInfoNavigation />
-          <Suspense fallback={<div></div>}>
-            <Outlet />
-          </Suspense>
+          <div className={css.secondContainer}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Outlet />
+            </Suspense>
+            <BookingForm />
+          </div>
         </div>
       )}
+      <Toaster position="top-right" containerStyle={{ zIndex: 9999 }} />
     </section>
   );
 }
