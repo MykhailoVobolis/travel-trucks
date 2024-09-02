@@ -3,6 +3,7 @@ import { persistStore, persistReducer, FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, 
 import storage from "redux-persist/lib/storage";
 import { campersReducer } from "./campers/slice.js";
 import { filtersReducer } from "./filters/slice.js";
+import { modalReducer } from "./modal/slice.js";
 
 const campersPersistConfig = {
   key: "campers",
@@ -16,6 +17,7 @@ export const store = configureStore({
   reducer: {
     campers: persistedCampersReducer,
     filters: filtersReducer,
+    modal: modalReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

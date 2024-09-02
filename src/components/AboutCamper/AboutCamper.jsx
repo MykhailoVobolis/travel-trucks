@@ -4,7 +4,7 @@ import ImageGallery from "../ImageGallery/ImageGallery.jsx";
 
 import css from "./AboutCamper.module.css";
 
-export default function AboutCamper({ camper }) {
+export default function AboutCamper({ camper, onClick }) {
   const { gallery, name, price, rating, reviews, location, description } = camper;
 
   const [country, city] = location.split(", ");
@@ -26,7 +26,7 @@ export default function AboutCamper({ camper }) {
         </div>
       </div>
       <p className={css.priceValue}>&#8364;{price.toFixed(2)}</p>
-      <ImageGallery gallery={gallery} />
+      <ImageGallery gallery={gallery} onClick={onClick} />
       <p>{description}</p>
     </div>
   );
