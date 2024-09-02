@@ -1,8 +1,78 @@
-# React + Vite
+# Travel Trucks App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Опис
 
-Currently, two official plugins are available:
+Це React-додаток для бронювання кемперів.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Вимоги
+
+Перед початком роботи переконайтеся, що у вас встановлені наступні програми:
+
+- Node.js (версія 14.x або вище)
+- npm (версія 6.x або вище) або yarn (версія 1.x або вище)
+
+## Встановлення
+
+1. Клонуйте репозиторій на свій комп'ютер:
+
+   ```bash
+   git clone https://github.com/ваш-репозиторій.git
+   ```
+
+2. Перейдіть у папку з проектом:
+
+   ```bash
+   cd ваш-репозиторій
+   ```
+
+3. Встановіть залежності:
+
+   ```bash
+   npm install
+   ```
+
+   або якщо використовуєте yarn:
+
+   ```bash
+   yarn install
+   ```
+
+## Запуск проєкту
+
+1. Для локального запуску проєкту використовуйте команду:
+
+   ```bash
+   npm run dev
+   ```
+
+   або для yarn:
+
+   ```bash
+   yarn dev
+   ```
+
+2. Відкрийте в браузері:
+
+   ```bash
+   http://localhost:5173
+   ```
+
+## Збірка проєкту
+
+Для збірки проєкту використовуйте команду:
+
+```bash
+npm run build
+```
+
+або для yarn:
+
+```bash
+yarn build
+```
+
+Зібраний проєкт буде знаходитися в папці `build`.
+
+## Розгортання
+
+Для розгортання на платформі, такій як Vercel, слідуйте документації вашої платформи.
