@@ -4,3 +4,12 @@
   justify-content: start;
   margin-bottom: 28px;
 }
+
+.galleryItem {
+  transition: transform 300ms ease-in-out;
+}
+
+.galleryItem:hover {
+  transform: scale(1.04);
+  transition: transform 300ms ease-in-out;
+}
